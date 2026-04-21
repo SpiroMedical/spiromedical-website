@@ -1,0 +1,200 @@
+<!-- /index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spiro Medical — Pioneering Neuromodulation for Severe Asthma</title>
+  <meta name="description" content="Spiro Medical is developing an implantable neuromodulation therapy for severe, uncontrolled asthma through targeted spinal nerve stimulation.">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.18/dist/lenis.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="page-overlay"></div>  <!-- ← ajouter ici, avant tout le reste -->
+
+<!-- FIXED BACKGROUND -->
+<div id="hero-bg">
+  <canvas data-shader></canvas>
+  <img src="/images/circles.svg" class="circles-bg" alt="">
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="/"><img src="/images/logo-white.png" alt="Spiro Medical" style="height:36px;"></a>
+    </div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/therapy.html">Therapy</a>
+      <a href="/company.html">Company</a>
+      <button class="btn btn-upper" onclick="location.href='/contact.html'">Contact</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/therapy.html">Therapy</a>
+  <a href="/company.html">Company</a>
+  <button class="btn btn-upper" onclick="location.href='/contact.html'">Contact</button>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <div class="hero-text">
+      <div class="hero-tag">Spiro Medical</div>
+      <h1>Pioneering Neuromodulation for Severe Asthma</h1>
+      <p>Spiro Medical is developing an implantable neuromodulation therapy designed to address the unmet needs of patients with severe, uncontrolled asthma through targeted spinal nerve stimulation.</p>
+      <button class="btn" onclick="location.href='/therapy.html'">Learn About Our Therapy</button>
+    </div>
+    <div class="hero-img">
+      <img src="/images/patient.jpg" alt="Patient breathing freely">
+    </div>
+  </div>
+</div>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="section-inner fade-content">
+    <h2 class="section-title">Advancing Care Through<br>Intelligent Innovation</h2>
+    <p class="section-sub">Our approach combines deep clinical insights with advanced neuromodulation technology.</p>
+    <div class="cards">
+      <div class="card fade-in">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+        </div>
+        <h3>Neuromodulation Approach</h3>
+        <p>Targeted spinal nerve stimulation designed to modulate respiratory function and reduce asthma symptom burden in severe cases.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="3"/></svg>
+        </div>
+        <h3>Precision<br>Targeting</h3>
+        <p>Implantable device technology engineered for consistent, reliable therapeutic delivery at the thoracic spinal level.</p>
+      </div>
+      <div class="card fade-in">
+        <div class="card-icon">
+          <svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>Clinical<br>Development</h3>
+        <p>Evidence-based approach supported by rigorous preclinical data and advancing through structured clinical trials.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ASTHMA -->
+<section class="asthma">
+  <div class="asthma-inner fade-content">
+    <div class="asthma-text">
+      <h2>Understanding Severe Asthma & Respiratory Conditions</h2>
+      <p>Severe asthma represents a complex clinical challenge affecting approximately <strong>5–10% of all asthma patients</strong>. Despite maximal pharmacological therapy, many patients continue to experience <strong>significant symptom burden</strong>, frequent exacerbations, and diminished quality of life.</p>
+      <p>Current treatment options, while valuable, may not adequately address the <strong>underlying neurological components</strong> of respiratory regulation. Neuromodulation offers a complementary therapeutic approach by targeting <strong>autonomic nervous system pathways</strong> that influence bronchial tone and inflammatory responses.</p>
+      <p>Spiro Medical's investigational therapy is designed to provide a <strong>novel intervention for patients who have exhausted conventional treatment options</strong>.</p>
+    </div>
+    <div class="asthma-img">
+      <img src="/images/lungs.jpg" alt="Lung illustration">
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <div class="section-inner fade-content">
+    <h2 class="section-title">Frequently Asked Questions</h2>
+    <div class="faq-list" id="faq">
+      <div class="faq-item">
+        <button class="faq-q">What is neuromodulation therapy?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">Neuromodulation therapy involves the use of electrical stimulation to modulate nerve activity and alter physiological function. In the context of respiratory disease, it targets autonomic pathways that regulate bronchial tone.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">Who is eligible for this therapy?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">The therapy is designed for patients with severe, uncontrolled asthma who have not responded adequately to conventional pharmacological treatments including biologics and high-dose corticosteroids.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What is the current development status?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">Spiro Medical is currently conducting Phase I/IIa clinical studies to evaluate the safety, tolerability, and initial efficacy of the device in carefully selected patient populations.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">How does the implant work?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">The device is implanted at the thoracic spinal level (T1–T5) and delivers controlled electrical stimulation to sympathetic and parasympathetic nerve fibers that innervate the airways, potentially reducing bronchial hyperresponsiveness.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">What are the potential benefits?
+          <svg class="faq-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </button>
+        <div class="faq-a">Potential benefits include reduced frequency of asthma exacerbations, improved lung function, decreased reliance on medication, and enhanced quality of life for patients with severe disease.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner fade-content">
+    <h2>Partner with Innovation</h2>
+    <p>Explore collaboration opportunities, investment inquiries, or learn more about our clinical development program.</p>
+    <button class="btn" onclick="location.href='/contact.html'">Get in Touch</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-overlay"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo"><a href="/"><img src="/images/logo-white.png" alt="Spiro Medical" style="height:36px;"></a></div>
+        <p>Pioneering neuromodulation therapy for severe asthma through innovative medical device technology.</p>
+      </div>
+      <div class="footer-cols-row">
+        <div class="footer-col footer-col-company">
+          <h4>Company</h4>
+          <a href="/company.html">About Us</a>
+          <a href="/company.html#leadership">Leadership</a>
+          <a href="/company.html#investors">Investors</a>
+          <a href="/company.html#careers">Careers</a>
+        </div>
+        <div class="footer-col footer-col-resources">
+          <h4>Resources</h4>
+          <a href="/therapy.html">Therapy Overview</a>
+          <a href="/therapy.html#trials">Clinical Trials</a>
+          <a href="/therapy.html#publications">Scientific Publications</a>
+          <a href="/therapy.html#hcp">For Healthcare Professionals</a>
+        </div>
+      </div>
+      <div class="footer-col contact-col">
+        <h4>Contact</h4>
+        <p>525 Technology Drive, Suite 350<br>Irvine, CA 92618<br><br>(949) 421-7248<br>info@spiro-medical.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Spiro Medical, Inc. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>

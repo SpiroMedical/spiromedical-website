@@ -1,0 +1,222 @@
+<!-- /contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — Spiro Medical</title>
+  <meta name="description" content="Connect with Spiro Medical. We welcome inquiries from investors, clinical partners, healthcare professionals, and potential collaborators.">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.18/dist/lenis.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="page-overlay"></div>  <!-- ← ajouter ici, avant tout le reste -->
+
+<!-- FIXED BACKGROUND -->
+<div id="hero-bg">
+  <canvas data-shader></canvas>
+  <img src="/images/circles.svg" class="circles-bg" alt="">
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="/"><img src="/images/logo-white.png" alt="Spiro Medical" style="height:36px;"></a>
+    </div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/therapy.html">Therapy</a>
+      <a href="/company.html">Company</a>
+      <button class="btn btn-upper" onclick="location.href='/contact.html'">Contact</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/therapy.html">Therapy</a>
+  <a href="/company.html">Company</a>
+  <button class="btn btn-upper" onclick="location.href='/contact.html'">Contact</button>
+</div>
+
+<!-- HERO -->
+<div class="hero contact-hero">
+  <div class="contact-hero-content">
+    <h1>Connect with Spiro Medical</h1>
+    <p>We welcome inquiries from investors, clinical partners, healthcare professionals, and potential collaborators.</p>
+  </div>
+</div>
+
+<!-- CONTACT MAIN -->
+<section class="contact-section">
+  <div class="section-inner fade-content">
+    <div class="contact-inner">
+
+      <!-- FORM -->
+      <div class="contact-form-wrap">
+        <h2>Get in Touch</h2>
+        <form class="contact-form" id="contactForm" novalidate>
+
+          <div class="form-field">
+            <label for="inquiry">Inquiry Type <span class="required">*</span></label>
+            <select id="inquiry" name="inquiry" required>
+              <option value="" disabled selected>Select an inquiry type</option>
+              <option value="investor">Investor Inquiry</option>
+              <option value="clinical">Clinical Partnership</option>
+              <option value="hcp">Healthcare Professional</option>
+              <option value="general">General Information</option>
+            </select>
+            <span class="form-error">Please select an inquiry type</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="firstName">First Name <span class="required">*</span></label>
+              <input type="text" id="firstName" name="firstName" placeholder="First name" required>
+              <span class="form-error">First name is required</span>
+            </div>
+            <div class="form-field">
+              <label for="lastName">Last Name <span class="required">*</span></label>
+              <input type="text" id="lastName" name="lastName" placeholder="Last name" required>
+              <span class="form-error">Last name is required</span>
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="email">Email Address <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required>
+            <span class="form-error">Please enter a valid email address</span>
+          </div>
+
+          <div class="form-row">
+            <div class="form-field">
+              <label for="organization">Organization <span class="required">*</span></label>
+              <input type="text" id="organization" name="organization" placeholder="Your organization" required>
+              <span class="form-error">Organization is required</span>
+            </div>
+            <div class="form-field">
+              <label for="title">Title</label>
+              <input type="text" id="title" name="title" placeholder="Your title">
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label for="message">Message <span class="required">*</span></label>
+            <textarea id="message" name="message" rows="5" placeholder="How can we help you?" required></textarea>
+            <span class="form-error">Please enter a message</span>
+          </div>
+
+          <!-- Honeypot -->
+          <input type="text" name="_honeypot" style="display:none;" tabindex="-1" autocomplete="off">
+
+          <button type="submit" class="btn btn-submit" id="submitBtn">
+            <span class="btn-label">Submit Inquiry</span>
+            <span class="btn-loading" style="display:none;">Sending...</span>
+          </button>
+
+          <div class="form-success" id="formSuccess" style="display:none;">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+            Your inquiry has been sent. We'll be in touch shortly.
+          </div>
+
+        </form>
+      </div>
+
+      <!-- SIDEBAR -->
+      <div class="contact-sidebar">
+        <div class="contact-info-card">
+          <h3>Corporate Headquarters</h3>
+          <div class="contact-info-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+            <p>Spiro Medical, Inc.<br>525 Technology Drive, Suite 350<br>Irvine, CA 92618<br>United States</p>
+          </div>
+          <div class="contact-info-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            <p>info@spiro-medical.com</p>
+          </div>
+          <div class="contact-info-item">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.38 2 2 0 0 1 3.58 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.85a16 16 0 0 0 6.29 6.29l1.11-1.32a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            <p>(949) 421-7248</p>
+          </div>
+        </div>
+
+        <div class="contact-dept-card">
+          <div class="contact-dept">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+            <div>
+              <div class="dept-name">Investor Relations</div>
+              <a href="mailto:investors@spiromedical.com" class="dept-email">investors@spiromedical.com</a>
+            </div>
+          </div>
+          <div class="contact-dept">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            <div>
+              <div class="dept-name">Business Development</div>
+              <a href="mailto:partnerships@spiromedical.com" class="dept-email">partnerships@spiromedical.com</a>
+            </div>
+          </div>
+          <div class="contact-dept">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3H5a2 2 0 0 0-2 2v4m6-6h10a2 2 0 0 1 2 2v4M9 3v18m0 0h10a2 2 0 0 0 2-2v-4M9 21H5a2 2 0 0 1-2-2v-4m0 0h18"/></svg>
+            <div>
+              <div class="dept-name">Clinical & Scientific</div>
+              <a href="mailto:clinical@spiromedical.com" class="dept-email">clinical@spiromedical.com</a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-overlay"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo"><a href="/"><img src="/images/logo-white.png" alt="Spiro Medical" style="height:36px;"></a></div>
+        <p>Pioneering neuromodulation therapy for severe asthma through innovative medical device technology.</p>
+      </div>
+      <div class="footer-cols-row">
+        <div class="footer-col footer-col-company">
+          <h4>Company</h4>
+          <a href="/company.html">About Us</a>
+          <a href="/company.html#leadership">Leadership</a>
+          <a href="/company.html#investors">Investors</a>
+          <a href="/company.html#careers">Careers</a>
+        </div>
+        <div class="footer-col footer-col-resources">
+          <h4>Resources</h4>
+          <a href="/therapy.html">Therapy Overview</a>
+          <a href="/therapy.html#trials">Clinical Trials</a>
+          <a href="/therapy.html#publications">Scientific Publications</a>
+          <a href="/therapy.html#hcp">For Healthcare Professionals</a>
+        </div>
+      </div>
+      <div class="footer-col contact-col">
+        <h4>Contact</h4>
+        <p>525 Technology Drive, Suite 350<br>Irvine, CA 92618<br><br>(949) 421-7248<br>info@spiro-medical.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Spiro Medical, Inc. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/js/main.js"></script>
+<script type="module" src="/js/contact.js"></script>
+</body>
+</html>

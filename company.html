@@ -1,0 +1,248 @@
+<!-- /company.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Company — Spiro Medical</title>
+  <meta name="description" content="Meet the team behind Spiro Medical — a clinical-stage medical device company pioneering neuromodulation therapies for severe respiratory conditions.">
+  <link rel="stylesheet" href="https://unpkg.com/lenis@1.3.18/dist/lenis.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+<div id="page-overlay"></div>  <!-- ← ajouter ici, avant tout le reste -->
+
+<!-- FIXED BACKGROUND -->
+<div id="hero-bg">
+  <canvas data-shader></canvas>
+  <img src="/images/circles.svg" class="circles-bg" alt="">
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="/"><img src="/images/logo-white.png" alt="Spiro Medical" style="height:36px;"></a>
+    </div>
+    <div class="nav-links">
+      <a href="/">Home</a>
+      <a href="/therapy.html">Therapy</a>
+      <a href="/company.html" class="nav-active">Company</a>
+      <button class="btn btn-upper" onclick="location.href='/contact.html'">Contact</button>
+    </div>
+    <button class="hamburger" id="hamburger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<!-- MOBILE MENU -->
+<div class="mobile-menu" id="mobileMenu">
+  <a href="/">Home</a>
+  <a href="/therapy.html">Therapy</a>
+  <a href="/company.html">Company</a>
+  <button class="btn btn-upper" onclick="location.href='/contact.html'">Contact</button>
+</div>
+
+<!-- HERO -->
+<div class="hero company-hero">
+  <div class="company-hero-content">
+    <h1>Building the Future<br>of Respiratory Medicine</h1>
+    <p>Spiro Medical is a clinical-stage medical device company pioneering neuromodulation therapies for severe respiratory conditions.</p>
+  </div>
+</div>
+
+<!-- LEADERSHIP -->
+<section id="leadership" class="leadership">
+  <div class="section-inner fade-content">
+    <h2 class="section-title">Leadership Team</h2>
+    <p class="section-sub">World-class expertise in medical devices, respiratory medicine, and neuromodulation technology.</p>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="/images/team-rinda.jpg" alt="Rinda Sama" onerror="this.parentElement.classList.add('no-photo')">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Rinda Sama</div>
+          <div class="team-role">Chief Executive Officer</div>
+          <div class="team-bio">Visionary leader with extensive experience in medical device commercialization and strategic growth. Proven track record in building high-performing teams and advancing innovative therapies.</div>
+          <div class="team-links">
+            <a href="mailto:rsama@spiro-medical.com" class="team-link">rsama@spiro-medical.com</a>
+            <a href="#" class="team-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="/images/team-thompson.jpg" alt="Dr. Michael Thompson" onerror="this.parentElement.classList.add('no-photo')">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Dr. Michael Thompson</div>
+          <div class="team-role">Chief Medical Officer</div>
+          <div class="team-bio">Board-certified pulmonologist and critical care physician. Previously led clinical development at Boston Scientific. Harvard Medical School faculty.</div>
+          <div class="team-links">
+            <a href="#" class="team-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-photo">
+          <img src="/images/team-patterson.jpg" alt="Dr. James Patterson" onerror="this.parentElement.classList.add('no-photo')">
+        </div>
+        <div class="team-info">
+          <div class="team-name">Dr. James Patterson</div>
+          <div class="team-role">Chief Scientific Officer</div>
+          <div class="team-bio">Pioneer in neuromodulation research with 50+ peer-reviewed publications. Former Director of Neurotechnology at Abbott.</div>
+          <div class="team-links">
+            <a href="#" class="team-link">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTORS -->
+<section id="investors" class="investors">
+  <div class="section-inner fade-content">
+    <h2 class="section-title">Investors & Funding</h2>
+    <p class="section-sub">Backed by leading healthcare investors committed to transformative medical technologies.</p>
+    <div class="funding-total">
+      <div class="funding-amount">$77M</div>
+      <div class="funding-label">Series A Funding Round (Closed January 2026)</div>
+    </div>
+    <div class="investors-grid">
+      <div class="investor-card">
+        <div class="investor-name">Atlas Venture</div>
+        <div class="investor-role">Lead Investor, Series A</div>
+        <div class="investor-amount">$28M</div>
+      </div>
+      <div class="investor-card">
+        <div class="investor-name">OrbiMed</div>
+        <div class="investor-role">Co-Lead, Series A</div>
+        <div class="investor-amount">$22M</div>
+      </div>
+      <div class="investor-card">
+        <div class="investor-name">Versant Ventures</div>
+        <div class="investor-role">Series A Participant</div>
+        <div class="investor-amount">$15M</div>
+      </div>
+      <div class="investor-card">
+        <div class="investor-name">RA Capital Management</div>
+        <div class="investor-role">Series A Participant</div>
+        <div class="investor-amount">$12M</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVISORY BOARD -->
+<section class="advisory">
+  <div class="section-inner fade-content">
+    <h2 class="section-title">Advisory Board</h2>
+    <div class="advisory-grid">
+      <div class="advisory-card">
+        <div class="advisory-name">Prof. Robert Johnson</div>
+        <div class="advisory-role">Scientific Advisory Board Chair</div>
+        <div class="advisory-org">Stanford University School of Medicine</div>
+      </div>
+      <div class="advisory-card">
+        <div class="advisory-name">Dr. Maria Santos</div>
+        <div class="advisory-role">Clinical Advisory Board</div>
+        <div class="advisory-org">Mayo Clinic, Pulmonology</div>
+      </div>
+      <div class="advisory-card">
+        <div class="advisory-name">Dr. Alan Fischer</div>
+        <div class="advisory-role">Regulatory Advisor</div>
+        <div class="advisory-org">Former FDA Medical Device Reviewer</div>
+      </div>
+      <div class="advisory-card">
+        <div class="advisory-name">Dr. Helen Park</div>
+        <div class="advisory-role">Scientific Advisor</div>
+        <div class="advisory-org">MIT, Department of Bioengineering</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION -->
+<section class="mission">
+  <div class="section-inner fade-content">
+    <div class="mission-inner">
+      <div class="mission-img">
+        <img src="/images/team-mission.jpg" alt="Spiro Medical team">
+      </div>
+      <div class="mission-text">
+        <h2>Our Mission</h2>
+        <p>Spiro Medical is dedicated to transforming the lives of patients with severe, uncontrolled asthma through pioneering neuromodulation technology.</p>
+        <p>We believe that by targeting the neurological underpinnings of respiratory disease, we can provide meaningful, long-lasting relief for patients who have exhausted conventional treatment options.</p>
+        <p>Our team combines deep clinical expertise, engineering excellence, and rigorous scientific methodology to advance a new standard of care in respiratory medicine.</p>
+        <div class="mission-values">
+          <h4>Core Values</h4>
+          <ul>
+            <li>Patient-centricity in all development decisions</li>
+            <li>Scientific rigor and evidence-based innovation</li>
+            <li>Collaboration with leading clinical institutions</li>
+            <li>Transparent communication with stakeholders</li>
+            <li>Commitment to regulatory excellence</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta">
+  <div class="cta-inner fade-content">
+    <h2>Partner with Innovation</h2>
+    <p>Explore collaboration opportunities, investment inquiries, or learn more about our clinical development program.</p>
+    <button class="btn" onclick="location.href='/contact.html'">Get in Touch</button>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-overlay"></div>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="logo"><a href="/"><img src="/images/logo-white.png" alt="Spiro Medical" style="height:36px;"></a></div>
+        <p>Pioneering neuromodulation therapy for severe asthma through innovative medical device technology.</p>
+      </div>
+      <div class="footer-cols-row">
+        <div class="footer-col footer-col-company">
+          <h4>Company</h4>
+          <a href="/company.html">About Us</a>
+          <a href="/company.html#leadership">Leadership</a>
+          <a href="/company.html#investors">Investors</a>
+          <a href="/company.html#careers">Careers</a>
+        </div>
+        <div class="footer-col footer-col-resources">
+          <h4>Resources</h4>
+          <a href="/therapy.html">Therapy Overview</a>
+          <a href="/therapy.html#trials">Clinical Trials</a>
+          <a href="/therapy.html#publications">Scientific Publications</a>
+          <a href="/therapy.html#hcp">For Healthcare Professionals</a>
+        </div>
+      </div>
+      <div class="footer-col contact-col">
+        <h4>Contact</h4>
+        <p>525 Technology Drive, Suite 350<br>Irvine, CA 92618<br><br>(949) 421-7248<br>info@spiro-medical.com</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Spiro Medical, Inc. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="#">Compliance</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script type="module" src="/js/main.js"></script>
+</body>
+</html>
