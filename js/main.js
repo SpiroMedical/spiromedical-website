@@ -26,6 +26,17 @@ document.addEventListener('click', e => {
   const href = a.getAttribute('href');
   if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('http')) return;
   if (e.metaKey || e.ctrlKey || e.shiftKey) return;
+
+  // Same page with anchor (e.g. company.html#investors while on company.html)
+  const [path, hash] = href.split('#');
+  const currentPath = location.pathname.replace(/\/$/, '');
+  const isSamePage = path === '' || currentPath.endsWith(path.replace(/^\//, ''));
+  if (isSamePage && hash) {
+    const target = document.getElementById(hash);
+    if (target) target.scrollIntoView({ behavior: 'smooth' });
+    return;
+  }
+
   e.preventDefault();
   navigateTo(href);
 });
