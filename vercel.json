@@ -1,4 +1,7 @@
 {
-  "cleanUrls": true,
-  "trailingSlash": false
+  "rewrites": [
+    { "source": "/therapy",  "destination": "/therapy.html" },
+    { "source": "/company",  "destination": "/company.html" },
+    { "source": "/contact",  "destination": "/contact.html" }
+  ]
 }
