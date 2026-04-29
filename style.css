@@ -11,7 +11,7 @@ html { scroll-behavior: smooth; }
   --navy: #203f6b;
   --lapis: #236594;
   --teal: #4aabbb;
-  --teal-hover: #5bbccc;
+  --teal-hover: #74dde2;
   --text: #203f6b;
   --light-bg: #f4f7f9;
 }
@@ -190,7 +190,7 @@ section { padding: 90px 60px; position: relative; z-index: 2; background: white;
 .section-inner { max-width: 1200px; margin: 0 auto; }
 .section-title {
   text-align: center; font-size: 40px; font-weight: 800;
-  color: var(--text); margin-bottom: 12px; line-height: 1.1;
+  color: var(--text); margin-bottom: 20px; line-height: 1.1;
 }
 .section-sub {
   text-align: center; font-size: 16px; color: #7a9aaa;
@@ -617,6 +617,83 @@ section.fade-in { opacity: 1; transform: none; }
 .dept-email:hover { color: var(--navy); }
 
 /* ============================================================
+   TEAM GRID — 2 ROWS
+   ============================================================ */
+.team-grid { margin-bottom: 24px; }
+.team-grid:last-child { margin-bottom: 0; }
+.team-grid--4 .team-card { min-width: 210px; }
+
+/* ============================================================
+   INVESTORS LOGOS
+   ============================================================ */
+.investors-logos {
+  display: flex; gap: 20px; flex-wrap: wrap;
+  justify-content: center; align-items: center;
+}
+.investor-logo-card {
+  flex: 1; min-width: 140px; max-width: 200px; height: 88px;
+  background: white; border-radius: 10px;
+  border: 1.5px solid #e0eaf0;
+  display: flex; align-items: center; justify-content: center;
+  padding: 18px 24px;
+  transition: border-color 0.3s ease;
+}
+.investor-logo-card:hover { border-color: #8aaabb; }
+.investor-logo-card img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.investor-logo-fallback {
+  display: none; font-size: 14px; font-weight: 700;
+  color: var(--text); text-align: center;
+}
+
+/* ============================================================
+   CLINICAL EVIDENCE — STUDY CARDS
+   ============================================================ */
+.clinical-evidence { background: white; }
+.studies-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+
+.study-card {
+  background: var(--light-bg); border-radius: 12px;
+  padding: 32px; border: 1.5px solid #e0eaf0;
+  display: flex; flex-direction: column;
+}
+.study-header {
+  display: flex; align-items: flex-start;
+  justify-content: space-between; gap: 16px; margin-bottom: 28px;
+}
+.study-header h3 { font-size: 20px; font-weight: 700; color: var(--text); line-height: 1.2; }
+.study-badge {
+  font-size: 10px; font-weight: 700; letter-spacing: 1px;
+  text-transform: uppercase; padding: 5px 12px;
+  border-radius: 20px; flex-shrink: 0; white-space: nowrap;
+}
+.study-badge--completed { background: #e6f4f0; color: #1a7a5a; }
+.study-badge--recruiting { background: #e6f0f9; color: #1a4a8a; }
+
+.study-stats { display: flex; flex-direction: column; gap: 18px; margin-bottom: 20px; }
+.study-stat-value { font-size: 36px; font-weight: 800; color: var(--navy); line-height: 1; }
+.study-stat-label { font-size: 14px; color: #7a9aaa; margin-top: 4px; }
+
+.study-endpoints { margin-bottom: 24px; }
+.study-endpoints h4 {
+  font-size: 11px; font-weight: 700; letter-spacing: 1.5px;
+  text-transform: uppercase; color: var(--teal); margin-bottom: 8px;
+}
+.study-endpoints p { font-size: 14px; color: #5a7a8a; line-height: 1.7; }
+
+.study-cta { display: inline-block; margin-top: 20px; align-self: flex-start; }
+
+/* ============================================================
+   FOOTER DISCLAIMER
+   ============================================================ */
+.footer-disclaimer {
+  width: 100%; text-align: center;
+  font-size: 11px; color: rgba(255,255,255,0.28);
+  font-style: italic; padding-top: 12px;
+  border-top: 1px solid rgba(255,255,255,0.05);
+  margin-top: 10px;
+}
+
+/* ============================================================
    RESPONSIVE — 1024px
    ============================================================ */
 @media (max-width: 1024px) {
@@ -697,6 +774,15 @@ section.fade-in { opacity: 1; transform: none; }
 
   /* Circles */
   .circles-bg { width: 380vw; height: 380vw; }
+
+  /* Clinical evidence */
+  .studies-grid { grid-template-columns: 1fr; }
+
+  /* Investor logos */
+  .investor-logo-card { min-width: calc(50% - 10px); max-width: 100%; }
+
+  /* Team grid 4 */
+  .team-grid--4 .team-card { min-width: 100%; }
 
   /* Contact */
   .contact-hero-content { padding: 120px 24px 40px; }
