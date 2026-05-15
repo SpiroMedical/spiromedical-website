@@ -127,6 +127,18 @@ if (hamburger && mobileMenu) {
   });
 }
 
+/* ── Spine video — play on first scroll ── */
+const spineVideo = document.getElementById('spine-video');
+if (spineVideo) {
+  const playOnScroll = () => {
+    spineVideo.play()
+      .then(() => lenis.off('scroll', playOnScroll))
+      .catch(err => console.warn('Spine video play failed:', err));
+  };
+  lenis.on('scroll', playOnScroll);
+  spineVideo.addEventListener('error', e => console.error('Spine video error:', e));
+}
+
 /* ── Fade-in on scroll ── */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(e => {
