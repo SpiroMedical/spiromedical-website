@@ -612,7 +612,7 @@ section.fade-in { opacity: 1; transform: none; }
 
 .stat-references {
   display: flex; flex-direction: column; gap: 4px;
-  margin-top: 20px; padding-top: 16px;
+  margin-top: 20px; margin-bottom: 48px; padding-top: 16px;
   border-top: 1px solid #e0eaf0;
 }
 .stat-references p {
