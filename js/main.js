@@ -24,7 +24,7 @@ document.addEventListener('click', e => {
   const a = e.target.closest('a[href]');
   if (!a) return;
   const href = a.getAttribute('href');
-  if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('http')) return;
+  if (!href || href.startsWith('#') || href.startsWith('mailto:') || href.startsWith('http') || href.endsWith('.pdf')) return;
   if (e.metaKey || e.ctrlKey || e.shiftKey) return;
 
   // Same page with anchor (e.g. company.html#investors while on company.html)
