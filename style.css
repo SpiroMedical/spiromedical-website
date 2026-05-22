@@ -401,6 +401,13 @@ section.fade-in { opacity: 1; transform: none; }
   background: white; border-radius: 12px; overflow: hidden;
   border: 1.5px solid #e0eaf0;
 }
+.team-photo {
+  width: 100%; aspect-ratio: 1/1;
+  background: linear-gradient(135deg, #1a3a5c, #203f6b);
+  overflow: hidden;
+}
+.team-photo img { width: 100%; height: 100%; object-fit: cover; }
+.team-photo.no-photo { display: flex; align-items: center; justify-content: center; }
 .team-info { padding: 28px 24px; }
 .team-name { font-size: 18px; font-weight: 700; color: var(--text); margin-bottom: 4px; }
 .team-role { font-size: 12px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: var(--teal); margin-bottom: 12px; }
