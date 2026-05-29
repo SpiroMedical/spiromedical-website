@@ -23,12 +23,13 @@ if (form) {
         body: new FormData(form)
       });
 
-      if (res.ok) {
+      const data = await res.json();
+
+      if (data.ok) {
         form.style.display = 'none';
         success.style.display = 'flex';
       } else {
-        const data = await res.json();
-        const msg  = data?.errors?.map(e => e.message).join(', ') || 'Something went wrong. Please try again.';
+        const msg = data?.errors?.map(e => e.message).join(', ') || 'Something went wrong. Please try again.';
         alert(msg);
       }
     } catch {
