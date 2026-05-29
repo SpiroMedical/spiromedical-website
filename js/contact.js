@@ -1,8 +1,10 @@
 /* /js/contact.js */
 
-const form     = document.getElementById('contactForm');
+const FORMSPREE_ID = 'xqejjaez';
+
+const form      = document.getElementById('contactForm');
 const submitBtn = document.getElementById('submitBtn');
-const success  = document.getElementById('formSuccess');
+const success   = document.getElementById('formSuccess');
 
 if (form) {
   form.addEventListener('submit', async e => {
@@ -14,22 +16,31 @@ if (form) {
 
     setLoading(true);
 
-    // — Replace this block with your real endpoint (Formspree, etc.) —
-    await new Promise(r => setTimeout(r, 1000)); // simulate send
-    // const res = await fetch('https://formspree.io/f/YOUR_ID', {
-    //   method: 'POST',
-    //   headers: { 'Accept': 'application/json' },
-    //   body: new FormData(form)
-    // });
+    try {
+      const res = await fetch(`https://formspree.io/f/${FORMSPREE_ID}`, {
+        method: 'POST',
+        headers: { 'Accept': 'application/json' },
+        body: new FormData(form)
+      });
 
-    setLoading(false);
-    form.style.display = 'none';
-    success.style.display = 'flex';
+      if (res.ok) {
+        form.style.display = 'none';
+        success.style.display = 'flex';
+      } else {
+        const data = await res.json();
+        const msg  = data?.errors?.map(e => e.message).join(', ') || 'Something went wrong. Please try again.';
+        alert(msg);
+      }
+    } catch {
+      alert('Network error. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
+    }
   });
 
   // Live validation on blur
   form.querySelectorAll('input, select, textarea').forEach(el => {
-    el.addEventListener('blur', () => validateField(el));
+    el.addEventListener('blur',  () => validateField(el));
     el.addEventListener('input', () => el.classList.remove('invalid'));
   });
 }
@@ -43,7 +54,7 @@ function validate() {
 }
 
 function validateField(el) {
-  const isEmpty = !el.value.trim();
+  const isEmpty        = !el.value.trim();
   const isInvalidEmail = el.type === 'email' && el.value && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(el.value);
   if (isEmpty || isInvalidEmail) {
     el.classList.add('invalid');
@@ -55,6 +66,6 @@ function validateField(el) {
 
 function setLoading(loading) {
   submitBtn.disabled = loading;
-  submitBtn.querySelector('.btn-label').style.display  = loading ? 'none'  : 'inline';
+  submitBtn.querySelector('.btn-label').style.display  = loading ? 'none'   : 'inline';
   submitBtn.querySelector('.btn-loading').style.display = loading ? 'inline' : 'none';
 }
