@@ -9,6 +9,8 @@ export default defineConfig({
         therapy: resolve(__dirname, 'therapy.html'),
         company: resolve(__dirname, 'company.html'),
         contact: resolve(__dirname, 'contact.html'),
+        privacy: resolve(__dirname, 'privacy.html'),
+        terms:   resolve(__dirname, 'terms.html'),
       }
     }
   }
