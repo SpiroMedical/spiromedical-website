@@ -907,7 +907,10 @@ section.fade-in { opacity: 1; transform: none; }
   .circles-bg { width: 380vw; height: 380vw; }
 
   /* Clinical evidence */
-  .studies-grid { grid-template-columns: 1fr; }
+  .studies-grid { grid-template-columns: 1fr; width: 100%; }
+  .study-card { min-width: 0; width: 100%; }
+  .study-header { flex-wrap: wrap; gap: 10px; }
+  .study-badge { align-self: flex-start; }
 
   /* Investor logos */
   .investor-logo-card { min-width: calc(50% - 10px); max-width: 100%; }
