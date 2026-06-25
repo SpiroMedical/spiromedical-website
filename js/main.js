@@ -13,6 +13,15 @@ requestAnimationFrame(() => {
   setTimeout(() => overlay.classList.add('fade-out'), 60);
 });
 
+// Fix back button: when browser restores page from bfcache, force fade-out
+window.addEventListener('pageshow', e => {
+  if (e.persisted) {
+    overlay.classList.remove('fade-in');
+    overlay.classList.add('is-ready');
+    setTimeout(() => overlay.classList.add('fade-out'), 60);
+  }
+});
+
 function navigateTo(url) {
   overlay.classList.remove('fade-out');
   overlay.classList.add('fade-in');
